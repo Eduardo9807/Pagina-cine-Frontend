@@ -1,0 +1,438 @@
+:root {
+  --bg: #120826; /* Fondo */
+  --text: #ffffff; /* color de texto  */
+  --primary:hsl(0, 2%, 32%); /* color de las estrellas  */
+  --rating-bg: rgb(56, 56, 57); /* color de la calificacion de las peliculas  */
+}
+
+
+
+
+
+
+body {
+  margin: 0; /*  margen */
+  font-family: 'Segoe UI', sans-serif; /* tipo de letra  */
+  background-color: #f4f4f4; /* Color de texto  */
+}
+
+
+/* encabezado */
+.menu {
+  background-color: #120826; /* Color de fondo del encabezado  */ 
+  color: #fff; /* Color de texto del menu  */
+  display: flex; /* alinea el menu  */ 
+  justify-content: space-between; /* Espacio entre los elementos   */ 
+  align-items: center; /*alinea vertical el menu   */ 
+  padding: 15px 30px; /* espacio entre el contenedor y las letras   */
+  flex-wrap: wrap; /*  Acomoda los elementos de mejor manera  */
+}
+
+/* Título */
+.menu h1 {
+  margin: 0; /*   elimina el margen */
+  font-size: 28px; /* Tamaño de letra  */
+}
+
+/* imagen del logotipo  */
+.menu img {
+  width: 50px; /* ancho  */
+  height: 50px; /* largo  */ 
+  margin-right: auto; /* posicion del logotipo   */ 
+}
+
+/* Menú de navegación */
+.menu nav ul {
+  list-style: none; /* elimina los puntos de la lista   */
+  display: flex;  /* lista en linea vertical  */ 
+  gap: 20px; /* espacio entre los titulos del menu  */
+  margin: 0; /* eapacio entre los titulos del menu  */ 
+  padding: 0; /* elimina margen  */
+}
+
+/* Enlaces del menú */
+.menu nav ul li a {
+  color: #ffffff; /* color de letra en los enlaces */
+  text-decoration: none; /* elimin al subrayado   */
+  font-weight: 500; /* Grosor del texto  */
+  padding: 8px 12px; /* reyeno del enlace  */
+  transition: color #120826 0.3s, color 0.3s; /* transicion al hacer al pasar el cursor  */
+}
+
+.menu nav ul li a:hover {
+  background-color: #ADADAD; /* fondo al pasar el cursor  */
+  color: #3F528C; /* color para el texto cuando pasamos el cursor  */
+  border-radius: 4px; /* tipo de borde uqe va a tener los botones   */
+}
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;/* tipo de fuente  */
+  background-color: var(--bg); /* fondo usando la variable del color  */
+  color: var(--text); /* color del texto usando la variable incicial  */
+}
+
+/* hero */
+.hero {
+  position: relative; /*posicionando elementos  */ 
+  text-align: center; /* centra el contenido  */ 
+}
+.hero-img {
+  width: 100%; /* la imagen esta ocupando todo el ancho disponible  */
+  height: auto;/*  la imagen ocupar la altura automatica  */
+  display: block; /* eliina los espacios debajo de la imagen  */
+  
+}
+.btn-trailer {
+  position: absolute; /* coloca el boton sobre la imagen  */
+  bottom: 20px; /*  ubica el boton en la posicion que queremos  */
+  left: 20px; /*  */
+   
+  color: #00c206; /* color del boton    */
+  
+  padding: 10px 20px; /* relleno interno  */
+  border: none; /* no tine bordes  */
+  cursor: pointer; /* al picar el boton cambia  */ 
+  font-size: 16px; /* tamaño del texto   */
+}
+
+
+/* carrusel */
+.carrusel {
+  padding: 20px; /* espacio al rededor del carrusel  */
+}
+.carrusel h2 {
+  margin-bottom: 10px; /* estacio debajo del titulo  */
+}
+.carrusel-contenedor {
+  display: flex; /*  */
+  align-items: center; /*  centra verticalemnte */
+  position: relative; /* posiciona  */
+  overflow-x: hidden; 
+}
+.peliculas {
+  display: flex;
+  overflow-x: auto; /*alinea horizontalmente  para que quepan  */
+  scroll-behavior: smooth;  /* desplaza suavemente  */
+  gap: 10px; /* le da espacio entre las imagenes  */
+  padding: 10px 0; /* espacio vertical  */
+}
+.peliculas::-webkit-scrollbar {
+  display: none;  /* oculta la barra  */
+}
+.pelicula {
+  position: relative; /* agrega el contenido como calificacion  */
+  flex: 0 0 auto;/*sirve para darle un tamaño fijo   */
+  width: 150px; height: 200px; /* tamaño de cada imagen  */
+  height: 220px;
+}
+.pelicula img {
+  width: 100%; /* la imagen ocupa todo el contenedor  */
+  height: 100%; /* reyena todo el espacio  */
+  object-fit: cover;
+}
+.pelicula::after {
+  content: attr(data-rating) ; /* muestra la calificacion desdes html   */
+  position: absolute; /* posicion flotante  */
+  top: 5px; /* indica en donde estara la calificacion  */
+  right: 5px; /* el tamano  */
+  background: var(--primary); /* fondo oscuro desde la variable  */
+  color: white; /* texto blanco  */
+  padding: 2px 6px; /* espacio interno  */
+  font-size: 12px; /*  tamaño del texto */ 
+  border-radius: 5px; /* tipo de esquinas   */ 
+}
+.carrusel-flecha {
+  background: var(--primary); /* fondo desde la variable  */
+  color: white; /*texto blanco   */
+  border: none; /* sin bordes  */ 
+  padding: 10px; /*relleno   */ 
+  font-size: 20px; /* tamaño de la flecha  */ 
+  cursor: pointer; /*  tipo del cursor */
+  z-index: 2; /*  se sobrepone sobre otrsos elemnros  */
+}
+.izquierda {
+  margin-right: 5px; /* margen de la derecha  */
+}
+.derecha {
+  margin-left: 5px; /* margen de la izquierda */
+}
+
+/* cartelera */
+.cartelera {
+  padding: 20px; /* espacio  */
+}
+.cartelera h2 {
+  margin-bottom: 10px; /*espacio debajo del titulo   */
+}
+.filtros {
+  margin-bottom: 20px;
+}
+.filtros button {
+  background: transparent; /*  fondo tranparente  */
+  border: 2px solid var(--primary); /* bore oscuro desde la varieble  */
+  color: var(--text); /* texto blanco desde la variable  */
+  padding: 5px 15px; /* reyeno de botones  */ 
+  margin-right: 10px; /* separcion entre botones  */ 
+  cursor: pointer; /* tipo de cursor   */ 
+  border-radius: 5px; /* boton redondiado  */
+transition: calc(0.4); /* transicion de color  */
+}
+.filtros button:hover {
+  background: var(--primary); /* fondo desde la variable  */
+  color: white; /* color de texto  */
+}
+.grid-cartelera {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* le da forma a la tarjeta en columnas  */
+  gap: 15px; /* espacio entre tarjetas  */
+}
+.tarjeta {
+  position: relative; /* coloca la calificacion y sus propiedades desde el  */ 
+  overflow: hidden; /* sirve para que no se desborde  */
+}
+.tarjeta img {
+  width: 100%; /* ancho de la imagen   */
+  height: 80%; /* lago de la imagen, toda tendran el mismo tamaño   */
+  display: block; /* elimina el espacio */ 
+  
+}
+.tarjeta h3 {
+  margin-top: 5px; /* espacio en el titulo  */ 
+  font-size: 16px; /*tamaño del texto   */
+  text-align: center; /* centra el titulo  */
+}
+.tarjeta::after {
+  content: attr(data-rating) ; /* muestra la calificacion desde html  */
+  position: absolute; /* posicion flotante  */ 
+  top: 5px; /* indica en donde estara la calificaion   */ 
+  left: 5px;
+  background: var(--rating-bg); /*fondo desde la variable   */ 
+  color: rgb(255, 255, 255); /* texto blanco  */ 
+  padding: 2px 6px; /*  reyeno  */
+  font-size: 12px; /* tamaño del texto  */ 
+  border-radius: 5px; /*cordes redondedos   */ 
+}
+
+
+
+
+
+
+
+.top10-section {
+  background: #111;
+  padding: 2.5rem 2.5rem;
+  color: var(--blanco);
+}
+
+.top10-section h2 {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  font-weight: 900;
+  margin-bottom: 3rem;
+  margin-top: 1rem;
+  line-height: 1;
+}
+
+.top10-section h2 span {
+  color: var(--blanco);
+}
+
+.top10-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overflow-y: hidden; /* evita scroll vertical */
+  gap: 12rem;
+  padding: 1em;
+  scroll-behavior: smooth;
+}
+
+.top10-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.rank-card {
+  position: relative;
+  scroll-snap-align: start;
+  flex: 0 0 30%;
+  max-width: 200px;
+  flex-shrink: 0;
+}
+
+.rank-card img {
+  width: 120%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  position: relative;
+  left: 8em;
+  z-index: 2; /* Imagen por encima del número */
+}
+
+.rank-card:hover img {
+  transform: scale(1.02);
+}
+
+.rank-number {
+  position: absolute;
+  bottom: -3rem;
+  left: 4rem;
+  font-size: 11rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  transition: left 0.3s ease;
+  z-index: 1; /* Número detrás de la imagen */
+  pointer-events: none;
+}
+
+.rank-card:hover .rank-number {
+  left: 1rem; /* se desplaza más a la izquierda */
+  opacity: 1;
+  text-shadow:
+    0 0 10px #fff,
+    0 0 20px rgb(54, 10, 177),
+    0 0 30px #f0f;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer {
+  background-color: var(--azulclaro);
+  color: var(--blanco);
+  padding: 10px 50px;
+  font-size: 14px;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.footer-column {
+  flex: 1 1 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.footer-logo {
+  font-family: 'Fredoka One', cursive;
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.footer-column h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+  }
+
+.footer-column a {
+  color: var(--blanco);
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  text-decoration: underline;
+}
+
+/* Redes sociales */
+.social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+/* Botones de app */
+.app-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.app-buttons img {
+  width: 120px;
+  height: auto;
+}
+
+/* Logo lateral */
+.icon img {
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+  margin-top: 70px;
+}
+
+/* Línea inferior */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid var(--blanco);
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/* responsiva  */
+@media (max-width: 768px) {
+  .pelicula {
+    width: 120px;
+    height: 180px;
+  }
+  .btn-trailer {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
