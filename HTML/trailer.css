@@ -1,0 +1,90 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+    url('images/modal/modalback.jpg') center/cover no-repeat;
+  color: var(--blanco);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-body {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.modal-left img {
+  width: clamp(150px, 25vw, 200px);
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+.modal-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+}
+
+.meta {
+  font-size: clamp(0.75rem, 1.2vw, 0.95rem);
+  color: #ccc;
+}
+
+.rating {
+  background-color: rgb(173, 162, 95);
+  color: var(--blanco);
+  padding: 0 0.4rem;
+  border-radius: 5px;
+  font-weight: bolder;
+  font-size: clamp(0.8rem, 1.2vw, 1rem);
+}
+
+.tags span {
+  background-color: #333;
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin-right: 0.3rem;
+  font-size: clamp(0.7rem, 1vw, 0.85rem);
+}
+
+.watch-button {
+  padding: 0.5rem 1rem;
+  background: var(--blanco);
+  color: var(--negro);
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+}
+
+.watch-button:hover {
+  background: var(--gris);
+}
+
+.modal iframe {
+  width: 100%;
+  height: clamp(200px, 45vw, 400px);
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
