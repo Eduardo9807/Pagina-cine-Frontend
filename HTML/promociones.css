@@ -1,0 +1,57 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:#120826;
+  color: #333;
+  padding: 20px;
+}
+
+
+.Promociones h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+
+.promociones-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+
+.promo, .promos {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.promo img, .promos img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+.promo:hover, .promos:hover {
+  transform: scale(1.05);
+}
+
+
+.promo {
+  margin-top: 30px;
+}
