@@ -1,0 +1,31 @@
+{
+  "name": "cinemania",
+  "version": "1.0.0",
+  "description": "Mejorando pagina de cine, creada por Anna, Brenda y Eduardo",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass src/scss:dist/css",
+    "dev": "gulp dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Eduardo9807/Pagina-cine-Frontend.git"
+  },
+  "keywords": [
+    "SASS",
+    "NMP",
+    "Gulp"
+  ],
+  "author": "Eduardo Piña Anna Paulina, Brenda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Eduardo9807/Pagina-cine-Frontend/issues"
+  },
+  "homepage": "https://github.com/Eduardo9807/Pagina-cine-Frontend#readme",
+  "devDependencies": {
+    "gulp": "^5.0.1",
+    "gulp-sass": "^6.0.1",
+    "sass": "^1.89.2"
+  }
+}

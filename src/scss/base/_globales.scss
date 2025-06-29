@@ -1,0 +1,20 @@
+@use 'base/variables' as v;
+
+//definiendo estilos globales
+
+html {
+    font-size: 62.5%; //2rem
+    box-sizing: border-box;
+    scroll-padding-top: 0rem;
+}
+*, 
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+  margin: 0; /*  margen */
+  font-family: 'Segoe UI', sans-serif; /* tipo de letra  */
+  background-color: v.$texto; /* Color de texto  */
+}
