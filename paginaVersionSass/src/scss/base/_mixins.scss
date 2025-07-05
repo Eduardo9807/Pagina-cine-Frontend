@@ -1,0 +1,22 @@
+@use 'base/variables' as v;
+
+//creando mxin para tablet
+
+@mixin tablet{
+    @media (max-width: v.$tablet){
+        @content;
+    }
+}
+//creando mixin para celular
+
+@mixin telefono{
+    @media (max-width: v.$telefono){
+        @content;
+    }
+}
+
+@mixin grid($columnas: 1, $gap: 3rem){
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    gap: $gap;
+}

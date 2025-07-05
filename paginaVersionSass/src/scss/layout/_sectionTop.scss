@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+
+.top10-section {
+    background: #111;
+    padding: 2.5rem 2.5rem;
+    color: v.$texto;
+    width: 93%;
+    margin: auto;
+    h2{
+        font-size: clamp(1.5rem, 4vw, 3rem);
+        font-weight: 900;
+        margin-bottom: 3rem;
+        margin-top: 1rem;
+        line-height: 1;
+        span{
+            color: v.$texto;
+        }
+    }
+}
+
+
+.top10-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overflow-y: hidden; /* evita scroll vertical */
+    gap: 12rem;
+    padding: 1em;
+    max-width: 100%;
+    scroll-behavior: smooth;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+.rank-card {
+    position: relative;
+    scroll-snap-align: start;
+    width: 250px;
+    flex-shrink: 0;
+
+    img{
+        width: 100%;
+        height: 350px;
+        object-fit: cover;
+        border-radius: 10px;
+        position: relative;
+        left: 8em;
+        z-index: 2; /* Imagen por encima del número */
+        &:hover{
+            transform: scale(1.02);
+        }
+    }
+    .rank-number {
+        position: absolute;
+        bottom: -3rem;
+        left: 4rem;
+        font-size: 11rem;
+        font-weight: 900;
+        color: v.$texto;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        transition: left 0.3s ease;
+        z-index: 1; /* Número detrás de la imagen */
+        pointer-events: none;
+    }
+    &:hover .rank-number{
+        left: 1rem; /* se desplaza más a la izquierda */
+        opacity: 1;
+        text-shadow:
+            0 0 10px #fff,
+            0 0 20px rgb(54, 10, 177),
+            0 0 30px #f0f;
+    }
+
+}

@@ -1,0 +1,79 @@
+@use 'base/variables' as v;
+/* carrusel */
+
+
+.carrusel{
+    width: 100%;
+    padding: 20px; /* espacio al rededor del carrusel  */
+    h2{
+        margin-bottom: 10px;
+        margin-left: 3.2rem; /* estacio debajo del titulo  */
+    }
+    .carrusel-contenedor {
+        display: flex; /*  */
+        align-items: center; /*  centra verticalemnte */
+        position: relative; /* posiciona  */
+        overflow-x: hidden;
+        width: 100%;
+        
+        .peliculas {
+            height: 36rem;
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+            overflow-x: scroll; /*alinea horizontalmente  para que quepan  */
+            scroll-behavior: smooth;  /* desplaza suavemente  */
+            gap: 10px; /* le da espacio entre las imagenes  */
+            padding: 10px 0; /* espacio vertical  */
+        }
+
+        .tarjeta {
+            
+            position: relative; /* agrega el contenido como calificacion  */
+            width: 260px; 
+            height: 100%; /* tamaño de cada imagen  */
+            flex: 0 0 auto;/*sirve para darle un tamaño fijo   */
+            img {
+                width: 100%; /* la imagen ocupa todo el contenedor  */
+                height: 90%; /* reyena todo el espacio  */
+                object-fit: contain;
+                display: block;
+            }
+            h3{
+                margin-top: 5px; /* espacio en el titulo  */ 
+                font-size: 16px; /*tamaño del texto   */
+                text-align: center;
+            }
+            &::after{
+                content: attr(data-rating) ; /* muestra la calificacion desdes html   */
+                position: absolute; /* posicion flotante  */
+                top: 5px; /* indica en donde estara la calificacion  */
+                right: 5px; /* el tamano  */
+                width: 30px;
+                background: v.$estrellas; /* fondo oscuro desde la variable  */
+                color: v.$texto; /* texto blanco  */
+                padding: 2px 6px; /* espacio interno  */
+                font-size: 12px; /*  tamaño del texto */ 
+                border-radius: 5px; /* tipo de esquinas   */ 
+            }
+
+        }
+
+        .carrusel-flecha {
+            background: var(--primary); /* fondo desde la variable  */
+            color: v.$texto; /*texto blanco   */
+            border: none; /* sin bordes  */ 
+            padding: 10px; /*relleno   */ 
+            font-size: 20px; /* tamaño de la flecha  */ 
+            cursor: pointer; /*  tipo del cursor */
+            z-index: 2; /*  se sobrepone sobre otrsos elemnros  */
+        }
+        .izquierda {
+            margin-right: 5px; /* margen de la derecha  */
+        }
+        .derecha {
+            margin-left: 5px; /* margen de la izquierda */
+        }
+    }
+}
+

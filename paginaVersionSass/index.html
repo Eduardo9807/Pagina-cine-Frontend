@@ -3,24 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="/css/style.css" />
+   <link rel="stylesheet" href="build/css/app.css" />
   <title>Cine Estelar</title>
  
 </head>
 <body>
 
 
-   <!-- Menú de navegaión, ya tiene su enlace que te envia a su apartado  -->
+  <!-- Menú de navegaión, ya tiene su enlace que te envia a su apartado  -->
 
   <header class="menu"> 
     <h1> CineMania  </h1>
-    <img src="/imagenes/logoCINEMANIA.png" alt="Logo CINEMANIA"> 
+    <img src="./img/logos/logoCINEMANIA.png" alt="Logo CINEMANIA"> 
 
 
     <nav>
             <ul>
-                <li><a href="/html/inicio.html"> Inicio  </a></li>
-                <li><a href="/html/promociones.html"> Promociones </a></li>
+                <li><a href="#"> Inicio  </a></li>
+                <li><a href="./src/pages/promociones.html"> Promociones </a></li>
                 <li><a href="/html/preventas.html"> Preventas  </a></li>
                 <li> <a href="/html/alimentos.html" > Alimentos </a></li>
             </ul>
@@ -31,7 +31,7 @@
 <!-- Hero, ya tiene su enlace y su botón  -->
 
   <section class="hero">
-    <img src="/imagenes/hero.3.jpg" alt="Película destacada" class="hero-img" />
+    <img src="./img/hero.3.jpg" alt="Película destacada" class="hero-img" />
     <button class="btn-trailer"> <a href="/html/trailer.html">  Ver Tráiler </a> </button>
   </section>
 
@@ -41,276 +41,61 @@
     <h2>Recomendadas</h2>
     <div class="carrusel-contenedor">
       <button class="carrusel-flecha izquierda">&#10094;</button>
-      <div class="peliculas">
-
-        <!-- Tarjetas de las peliculas  -->
-          <div class="pelicula" data-rating="4.1">
-          <img src="/imagenes/la bella y la bestia.jpg" alt="Película 1" />
-        </div>
-        
-         <div class="pelicula" data-rating="4.2">
-          <img src="/imagenes/megan.jpg" alt="Película 1" />
-        </div>
-
-
-         <div class="pelicula" data-rating="4.3">
-          <img src="/imagenes/mulan.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="4.4">
-          <img src="/imagenes/rey leon.jpg" alt="Película 1" />
-        </div>
-
-
-         <div class="pelicula" data-rating="4.5">
-          <img src="/imagenes/avatar.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="4.6">
-          <img src="/imagenes/it.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="4.7">
-          <img src="/imagenes/itanic.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="4.8">
-          <img src="/imagenes/terremoto.jpg" alt="Película 1" />
-          
-        </div>
-         <div class="pelicula" data-rating="4.9">
-          <img src="/imagenes/milagro en la celda 7.jpg" alt="Película 1" />
-        </div>
-
+      <div class="peliculas" id="recomendadas">      
         </div>
       <button class="carrusel-flecha derecha">&#10095;</button>
     </div>
   </section>
 
-
-        <h2>Recomendadas</h2>
-    <div class="carrusel-contenedor">
-      <button class="carrusel-flecha izquierda">&#10094;</button>
-      <div class="peliculas">
-
-         <div class="pelicula" data-rating="4.9">
-          <img src="/imagenes/milagro en la celda 7.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="5.0">
-          <img src="/imagenes/los juegos del hambre.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/jumanji.jpg" alt="Película 1" />
-        </div>
-
-         <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/malefica.jpg" alt="Película 1" />
-        </div>
-
-
-         <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/moana.jpg" alt="Película 1" />
-        </div>
-
-
-         <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/wonder.jpg" alt="Película 1" />
-        </div>
-
-        <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/cenicienta.jpg" alt="Película 1" />
-        </div>
-
-        <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/piraña.jpg" alt="Película 1" />
-
-        </div>
-
-        <div class="pelicula" data-rating="5.1">
-          <img src="/imagenes/fall.jpg" alt="Película 1" />
-        </div>
-       
-
-      </div>
-      <button class="carrusel-flecha derecha">&#10095;</button>
-    </div>
-  </section>
 
 <!-- Sección de la cartelera con los tres generos de peliculas diferentes (acción, romance y terror) ya tiene su enlace 
  que te envia su propia cartelera  )  -->
   <section class="cartelera">
     <h2>Cartelera</h2>
     <div class="filtros">
-     <a href="/html/accion.html"> <button data-genero="accion"> Acción </button> </a>  
-      <a href="/html/romance.html"> <button data-genero="romance">Romance</button> </a> 
-      <a href="/html/terror.html">  <button data-genero="terror">Terror</button> </a> 
+      <button data-genero="todas" class="filtroPeliculas active" id="filtro" > Todas </button> 
+      <button data-genero="accion"  class="filtroPeliculas" id="filtro" > Acción </button> 
+      <button data-genero="romantica"class="filtroPeliculas" id="filtro" >Romance</button>
+      <button data-genero="terror" class="filtroPeliculas" id="filtro" >Terror</button> 
     </div>
-   
-   
-   
-    <div class="grid-cartelera">
-        <!-- Peliculas de cartelera -->
-           <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/blancaNieves.jpg" alt="Pelicula " />
-        <h3>Película de Acción</h3>
-      </div>
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/better man.jpg" alt="Pelicula " />
-
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/flow.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/memorias de un caracol.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/paddingtton.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/una pelicula de minecraft.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/28 años despues.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/brad pitt.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/jurassic world.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/superman.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-   
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/materilaistas.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-
+    <div class="grid-cartelera" id="cartelera">
 
       
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/verano en rojo.jpg" alt="Pelicula " />
-        <h3></h3>
+        
+      </div>
+    </section>
+      <div class="contenedor-modal" id="modal">
+        <span class="cerrarModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+          <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
+        </svg>
+        </span>
+        <div class="cont-info">
+          <div class="img">
+            <img src="" alt="" id="imgModal">
+          </div>
+          <div class="info">
+            <h2 id="tituloModal"></h2>
+            <p id="generoModal"></p>
+            <p id="actoresModal"></p>
+            <p id="duracionModal"></p>
+            <button class="btn-trailerModal"><a href="" id="enlaceModal" target="_blank">Ver trailer</a></button>
+          </div>
+        </div>
+        <div class="cont-descripcion">
+          <p id="descripcionModal"></p>
+        </div>
       </div>
 
-
-      
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/titanic 2.jpg" alt="Pelicula " />
-        <h3></h3>
+    <!-- Galería tipo “Top 10” con tarjetas especiales -->
+    <section class="top10-section">
+      <h2>Las 10 más populares en México hoy</h2>
+      <div class="top10-grid" >
+        <div class="top10-carousel" id="top-peliculas">
       </div>
-
-
-      
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/ballerina.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-
-
-      
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/15 años y un dia.jpg" alt="Pelicula " />
-        <h3></h3>
-      </div>
-
-      
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/refugiado.jpg"  alt="Pelicula " />
-        <h3></h3>
-      </div>
-
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/miss pedegrine.jpg"  alt="Pelicula " />
-        <h3></h3>
-      </div>
-      
-      <div class="tarjeta" data-genero="accion" data-rating="4.2">
-        <img src="/imagenes/cruella.jpg"  alt="Pelicula " />
-        <h3></h3>
-      </div>
-    </div>
-  </section>
-
-  <!-- Galería tipo “Top 10” con tarjetas especiales -->
-<section class="top10-section">
-  <h2>Las 10 más populares en México hoy</h2>
-  <div class="top10-grid">
-     <div class="top10-carousel">
-    <div class="rank-card">
-      <span class="rank-number">1</span>
-      <img src="/imagenes/lilo.jpg" alt="Lilo & Stitch ">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">2</span>
-      <img src="/imagenes/dragon.jpg" alt="Cómo entrenar a tu dragón">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">3</span>
-      <img src="/imagenes/destino final.jpg" alt="Destino Final 6">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">4</span>
-      <img src="/imagenes/mision imposible.jpg" alt="Mission: Impossible - The Final Reckoning">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">5</span>
-      <img src="/imagenes/karate kid.jpg" alt="Karate Kid: Legends">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">6</span>
-      <img src="/imagenes/minegraft 2.jpg" alt="A Minecraft Movie ">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">7</span>
-      <img src="/imagenes/mickey 17.jpg" alt="Mickey 17 ">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">8</span>
-      <img src="/imagenes/ballerina.2.jpg" alt="Ballerina">
-    </div>
-    <div class="rank-card">
-      <span class="rank-number">9</span>
-      <img src="/imagenes/dog man.jpg" alt="Dog Man">
-    </div>
-    <div class="rank-card" >
-      <span class="rank-number">10</span>
-      <img src="/imagenes/sinners.jpg" alt="Sinners">
-    </div>
-    </div>
   </div>
 </section>
+
 
   
   <!-- Footer con datos de cines, redes sociales, contacto-->
@@ -366,8 +151,8 @@
      <div class="footer-column">
       <h3>CONTCTANOS</h3>
       <ul>
-        <li></li>Av. del Cine #123, Ciudad Creativa</li>
-<li>Tel: 555-123-4567</li>
+        <li>Av. del Cine #123, Ciudad Creativa</li>
+        <li>Tel: 555-123-4567</li>
 
       </ul>
     </div>
@@ -375,12 +160,12 @@
     <div class="footer-column">
         <p>Síguenos en:</p>
       <div class="social-icons">
-        <div class="social-icon"><img src="/imagenes/insta.png" alt="Instagram"></div>
-        <div class="social-icon"><img src="/imagenes/face.png" alt="Facebook"></div>
-        <div class="social-icon"><img src="/imagenes/tikitoko.png" alt="TikTok"></div>
-        <div class="social-icon"><img src="/imagenes/x.png" alt="X (Twitter)"></div>
-        <div class="social-icon"><img src="/imagenes/youtube.png" alt="YouTube"></div>
-        <div class="social-icon"><img src="/imagenes/pin.png" alt="Pinterest"></div>
+        <div class="social-icon"><img src="./img/logos/insta.png" alt="Instagram"></div>
+        <div class="social-icon"><img src="./img/logos/face.png" alt="Facebook"></div>
+        <div class="social-icon"><img src="./img/logos/tikitoko.png" alt="TikTok"></div>
+        <div class="social-icon"><img src="./img/logos/x.png" alt="X (Twitter)"></div>
+        <div class="social-icon"><img src="./img/logos/youtube.png" alt="YouTube"></div>
+        <div class="social-icon"><img src="./img/logos/pin.png" alt="Pinterest"></div>
       </div>
     
       <h3>LEGAL</h3>
@@ -388,7 +173,7 @@
         <li>Política</li>
         <li>Cookies</li>
       </ul>
-       <div class="icon"><img src="/imagenes/logoCINEMANIA.png" alt="Logo CINEMANIA"></div>
+      <div class="icon"><img src="./img/logos/logoCINEMANIA.png" alt="Logo CINEMANIA"></div>
     </div>
   </div>
 
@@ -397,6 +182,6 @@
   </div>
 </footer>
 
-  
+  <script src="build/js/app.js"></script>
 </body>
 </html>

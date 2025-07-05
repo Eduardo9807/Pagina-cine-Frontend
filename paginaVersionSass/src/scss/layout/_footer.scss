@@ -1,0 +1,97 @@
+@use 'base/variables' as v;
+
+.footer {
+    background-color: var(--azulclaro);
+    color: v.$texto;
+    padding: 10px 50px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1 1 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    h3{
+        font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    }
+    ul{
+        list-style: none;
+        padding: 0;
+        li{
+            margin-bottom: 10px;
+        }
+    }
+    a{
+        color: v.$texto;
+        text-decoration: none;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-logo {
+    font-family: 'Fredoka One', cursive;
+    font-weight: bold;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+
+/* Redes sociales */
+.social-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icon{
+    img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+} 
+
+/* Botones de app */
+.app-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    img{
+        width: 120px;
+        height: auto;
+    }
+}
+
+/* Logo lateral */
+.icon {
+    img {
+        width: 120px;
+        height: auto;
+        object-fit: contain;
+        margin-top: 70px;
+    }
+}
+
+
+/* Línea inferior */
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid v.$texto;
+    margin-top: 20px;
+    padding-top: 10px;
+}

@@ -1,0 +1,75 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+.cartelera {
+    width: 95%;
+
+    padding: 20px;
+    margin: auto;
+    h2{
+        margin-bottom: 10px; /*espacio debajo del titulo   */
+    } /* espacio  */
+}
+
+.filtros {
+    margin-bottom: 20px;
+    .active{
+        background-color: v.$estrellas;
+    }
+    button{
+        background: transparent; /*  fondo tranparente  */
+        border: 2px solid var(--primary); /* bore oscuro desde la varieble  */
+        color: v.$texto; /* texto blanco desde la variable  */
+        padding: 5px 15px; /* reyeno de botones  */ 
+        margin-right: 10px; /* separcion entre botones  */ 
+        font-size: 1.6rem;
+        cursor: pointer; /* tipo de cursor   */ 
+        border-radius: 5px; /* boton redondiado  */
+        transition: calc(0.4); /* transicion de color  */
+        &:hover{
+            background: v.$estrellas; /* fondo desde la variable  */
+            color: white; /* color de texto  */
+        }
+    }
+}
+
+.grid-cartelera {
+    display: grid;
+    width: 100%;
+    position: relative;
+    grid-template-columns: repeat(5,1fr); /* le da forma a la tarjeta en columnas  */
+    gap: 1.5rem; /* espacio entre tarjetas  */
+    @include m.tablet{
+        @include m.grid(3);
+    }
+    @include m.telefono{
+        @include m.grid(1);
+    }
+    .tarjeta {
+        position: relative; /* coloca la calificacion y sus propiedades desde el  */ 
+        overflow: hidden; /* sirve para que no se desborde  */
+        height: 38rem;
+        width: 100%;
+        flex: 0 0 auto; 
+        img{
+            width: 100%; /* ancho de la imagen   */
+            height: 90%; /* largo de la imagen, toda tendran el mismo tamaño   */
+            display: block; /* elimina el espacio */ 
+        }
+        h3{
+             margin-top: 5px; /* espacio en el titulo  */ 
+            font-size: 16px; /*tamaño del texto   */
+            text-align: center; /* centra el titulo  */
+        }
+        &::after{
+            content: attr(data-rating) ; /* muestra la calificacion desde html  */
+            position: absolute; /* posicion flotante  */ 
+            top: 5px; /* indica en donde estara la calificaion   */ 
+            left: 5px;
+            background: v.$clasificacion; /*fondo desde la variable   */ 
+            color: v.$texto; /* texto blanco  */ 
+            padding: 2px 6px; /*  reyeno  */
+            font-size: 12px; /* tamaño del texto  */ 
+            border-radius: 5px; /*cordes redondedos   */ 
+        }
+    }
+}

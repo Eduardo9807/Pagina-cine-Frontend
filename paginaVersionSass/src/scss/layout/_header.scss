@@ -1,0 +1,39 @@
+@use 'base/variables' as v;
+
+.menu{
+    background-color: v.$fondo; /* Color de fondo del encabezado  */ 
+    color: v.$texto; /* Color de texto del menu  */
+    display: flex; /* alinea el menu  */ 
+    justify-content: space-between; /* Espacio entre los elementos   */ 
+    align-items: center; /*alinea vertical el menu   */ 
+    padding: 10px 30px; /* espacio entre el contenedor y las letras   */
+    flex-wrap: wrap; /*  Acomoda los elementos de mejor manera  */
+    img{
+        width: 50px; /* ancho  */
+        height: 50px; /* largo  */ 
+        margin-right: auto; /* posicion del logotipo   */ 
+    }
+    nav{
+        ul{
+             list-style: none; /* elimina los puntos de la lista   */
+            display: flex;  /* lista en linea vertical  */ 
+            gap: 20px; /* espacio entre los titulos del menu  */
+            margin: 0; /* eapacio entre los titulos del menu  */ 
+            padding: 0; /* elimina margen  */
+            li{
+                a{
+                    color: v.$texto; /* color de letra en los enlaces */
+                    font-size: 2rem;
+                    font-weight: 500; /* Grosor del texto  */
+                    padding: 8px 12px; /* reyeno del enlace  */
+                    transition: color #120826 0.3s, color 0.3s; /* transicion al hacer al pasar el cursor  */
+                    &:hover{
+                        background-color: #ADADAD; /* fondo al pasar el cursor  */
+                        color: v.$hoverA; /* color para el texto cuando pasamos el cursor  */
+                        border-radius: 4px; /* tipo de borde uqe va a tener los botones   */
+                    }
+                }
+            }
+        }
+    }
+}

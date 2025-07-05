@@ -1,0 +1,33 @@
+@use 'base/variables'as v;
+.hero {
+    position: relative; /*posicionando elementos  */ 
+    text-align: center; /* centra el contenido  */ 
+    width: 93%;
+    display: flex;
+    margin: auto;
+    
+}
+.hero-img {
+    width: 100%; /* la imagen esta ocupando todo el ancho disponible  */
+    height: 90vh;/*  la imagen ocupar la altura automatica  */
+    display: block; /* eliina los espacios debajo de la imagen  */
+    border-radius: 20px;
+
+}
+.btn-trailer {
+    position: absolute; /* coloca el boton sobre la imagen  */
+    bottom: 20px; /*  ubica el boton en la posicion que queremos  */
+    left: 20px; /*  */
+    padding: 10px 20px; /* relleno interno  */
+    border: none; /* no tine bordes  */
+    border-radius: 10px;
+    background-color: v.$fondo;
+    cursor: pointer; /* al picar el boton cambia  */ 
+    font-size: 16px; /* tamaño del texto   */
+    a{
+        color: yellow;
+    }
+    &:hover {
+        background-color: v.$estrellas;
+    }
+    }

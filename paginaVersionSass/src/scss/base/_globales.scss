@@ -3,7 +3,7 @@
 //definiendo estilos globales
 
 html {
-    font-size: 62.5%; //2rem
+    font-size: 62.5%; //1rem=10px
     box-sizing: border-box;
     scroll-padding-top: 0rem;
 }
@@ -16,5 +16,13 @@ html {
 body {
   margin: 0; /*  margen */
   font-family: 'Segoe UI', sans-serif; /* tipo de letra  */
-  background-color: v.$texto; /* Color de texto  */
+  background-color: v.$fondo; /* Color de texto  */
+  color: v.$texto;
+}
+
+h1{
+  font-size: 3rem;
+}
+a{
+  text-decoration: none;
 }
