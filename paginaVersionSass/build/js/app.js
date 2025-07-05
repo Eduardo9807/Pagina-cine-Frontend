@@ -149,6 +149,7 @@ function filtrarPeliculas(genero) {
 
     mostrarPeliculas(filtradas, 'cartelera');
 }
+
 document.querySelector('.cerrarModal').addEventListener('click', () => {
     document.getElementById('modal').style.display = "none";
 });
